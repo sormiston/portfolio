@@ -1,3 +1,19 @@
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  transition: all 0.5s ease-out; }
+  .menu-btn .btn-line {
+    width: 32px;
+    height: 3px;
+    margin: 0 0 5px;
+    background: white;
+    transition: all 0.5s ease-out; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+
 * {
   box-sizing: border-box; }
 
@@ -17,8 +33,8 @@ body {
       position: absolute;
       top: 0;
       bottom: 0;
-      right: 0;
-      left: 0;
+      height: 100%;
+      width: 100%;
       background: rgba(68, 68, 68, 0.6);
       z-index: -1; }
 
