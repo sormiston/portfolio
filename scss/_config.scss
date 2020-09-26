@@ -4,6 +4,14 @@ $show-home-image: true;
 $home-image: url('/dist/assets/triangle.jpg');
 $background-opacity: 0.6;
 
+@mixin portrait-frame {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: solid 3px $secondary-color;
+  
+}
+
 @mixin easeOut {
   transition: all 0.5s ease-out;
 }
