@@ -25,7 +25,8 @@
   top: 0;
   width: 100%;
   opacity: 0.95;
-  visibility: hidden; }
+  visibility: hidden;
+  display: flex; }
   .menu.show {
     visibility: visible; }
   .menu-branding, .menu-nav {
@@ -33,7 +34,6 @@
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-    float: left;
     width: 50%;
     height: 100vh; }
   .menu-nav {

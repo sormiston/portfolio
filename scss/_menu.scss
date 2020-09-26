@@ -44,6 +44,7 @@
   width: 100%;
   opacity: 0.95;
   visibility: hidden;
+  display: flex;
   
   &.show {
     visibility: visible;
@@ -55,7 +56,6 @@
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-    float: left;
     width: 50%;
     height: 100vh;
   }
