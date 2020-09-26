@@ -23,6 +23,7 @@ $background-opacity: 0.6;
       background-attachment: fixed;
       background-size: cover;
       
+      // Bckground Gray Opacity Overlay
       &:after {
         content: '';
         position: absolute;
@@ -37,6 +38,14 @@ $background-opacity: 0.6;
   }
 }
 
+// Set Text Color (function)
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
 // Media query mixins
 @mixin mediaSm {
   @media screen and (max-width: 500px) {

@@ -11,7 +11,7 @@
     width: 32px;
     height: 3px;
     margin: 0 0 5px;
-    background: white;
+    background: set-text-color($primary-color);
     @include easeOut;
   }
   
@@ -42,7 +42,6 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.95;
   visibility: hidden;
   // display: flex;
   
@@ -67,7 +66,7 @@
   &-nav {
     margin: 0;
     padding: 0;
-    background: darken($primary-color, 5);
+    background: rgba(darken($primary-color, 5), 0.9);
     list-style: none;
     transform: translate3d(0, -100%, 0);
     @include easeOut;
@@ -79,7 +78,7 @@
   
   //Branding Side
   &-branding {
-    background: darken($primary-color, 1);
+    background: rgba(darken($primary-color, 1), 0.9);
     transform: translate3d(0, 100%, 0);
     @include easeOut;
     
@@ -114,7 +113,7 @@
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 300; 
-    color: white;
+    color: set-text-color($primary-color);
     text-decoration: none;
     @include easeOut;
     
