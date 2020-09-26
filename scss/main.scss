@@ -1,6 +1,7 @@
 
 @import 'config';
 @import 'menu';
+@import 'button';
 
 
 * {
@@ -111,6 +112,27 @@ main {
   padding: 0.5rem;
   border-bottom: 5px solid $secondary-color;
 }
+
+// Portfolio
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.7rem;
+  
+  img {
+    width: 100%;
+    border: white solid;
+    
+    &:hover {
+      opacity: 0.5;
+      border-color: $secondary-color;
+      @include easeOut;
+    }
+  }  
+}
+
+// Footer 
 
 #main-footer {
   text-align: center;
