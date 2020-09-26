@@ -95,9 +95,29 @@
     .nav-item {
       transform: translate3d(50vw, 0, 0);
       @include easeOut;
-    
+      //slide in from right
     &.show {
       transform: translate3d(0, 0, 0);
+    }
+    
+    &.current > a {
+      color: $secondary-color;
+    }
+  }
+  
+  .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: 300; 
+    color: white;
+    text-decoration: none;
+    @include easeOut;
+    
+    &:hover {
+      color: $secondary-color;
     }
   }
   }
