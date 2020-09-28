@@ -124,24 +124,34 @@ body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
-  body#bg-img {
-    background: url("/dist/assets/triangle.jpg");
-    background-attachment: fixed;
-    background-size: cover; }
-    body#bg-img:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      height: 100%;
-      width: 100%;
-      background: rgba(68, 68, 68, 0.6);
-      z-index: -1; }
+
+section#landing {
+  background: url("/dist/assets/triangle.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  z-index: -2;
+  height: 100%;
+  height: 101vh;
+  display: flex;
+  width: 100%;
+  flex-flow: column nowrap;
+  justify-content: center;
+  z-index: 1; }
+  section#landing:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(68, 68, 68, 0.6);
+    z-index: -1; }
 
 h1,
 h2,
 h3 {
-  margin: 0;
+  margin: 0 2rem;
   font-weight: 400; }
   h1.lg-heading,
   h2.lg-heading,
@@ -158,29 +168,21 @@ a {
   color: #fff;
   text-decoration: none; }
 
-header {
-  position: fixed;
-  z-index: 2;
-  width: 100%; }
-
 .text-secondary {
   color: #eece1a; }
 
 main {
-  padding: 4rem;
-  min-height: calc(100vh - 60px); }
+  min-height: calc(100vh - 60px);
+  z-index: 0; }
   main .icons {
-    margin-top: 1rem; }
+    margin: 1rem 2rem; }
     main .icons a {
       padding: 0.4rem;
       color: #fff; }
       main .icons a:hover {
         color: #eece1a;
+        cursor: pointer;
         transition: all 0.5s ease-out; }
-  main#home {
-    overflow: hidden; }
-    main#home h1 {
-      margin-top: 20vh; }
 
 .about-info {
   display: grid;
@@ -227,18 +229,21 @@ main {
   display: flex;
   flex-flow: column nowrap;
   width: 600px; }
-  #contact-form input, #contact-form textarea {
+  #contact-form input,
+  #contact-form textarea {
     padding: 2rem;
-    margin: .25rem;
+    margin: 0.25rem;
     border: 2px solid white;
     background: #444;
     color: white;
     font-size: 1.5rem;
     font-family: Arial; }
-    #contact-form input::placeholder, #contact-form textarea::placeholder {
+    #contact-form input::placeholder,
+    #contact-form textarea::placeholder {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #eece1a; }
-    #contact-form input:focus, #contact-form textarea:focus {
+    #contact-form input:focus,
+    #contact-form textarea:focus {
       transition: all 0.5s ease-out;
       outline: none;
       border-color: #eece1a;
@@ -252,10 +257,10 @@ main {
   height: 60px; }
 
 @media screen and (max-width: 768px) {
-  main {
+  section {
     align-items: center;
     text-align: center; }
-    main .lg-heading {
+    section .lg-heading {
       line-height: 1;
       margin-bottom: 1rem; }
   .menu {

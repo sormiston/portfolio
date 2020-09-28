@@ -18,10 +18,14 @@ $background-opacity: 0.6;
 
 @mixin background {
   @if $show-home-image {
-    &#bg-img {
+     
       background: $home-image;
       background-attachment: fixed;
       background-size: cover;
+      position: relative;
+      z-index: -2;
+      height: 100%;
+    
       
       // Bckground Gray Opacity Overlay
       &:after {
@@ -36,7 +40,7 @@ $background-opacity: 0.6;
       }
     }
   }
-}
+
 
 // Set Text Color (function)
 @function set-text-color($color) {
