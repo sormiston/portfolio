@@ -14,9 +14,9 @@
     />
     <link rel="stylesheet" href="./css/main.css" />
 
-    <title>Sean Ormiston ⎈ Full-Stack Developer</title>
+    <title>Contact</title>
   </head>
-  <body id="bg-img">
+  <body>
     <header>
       <div class="menu-btn">
         <div class="btn-line"></div>
@@ -29,10 +29,10 @@
           <div class="portrait"></div>
         </div>
         <ul class="menu-nav">
-          <li class="nav-item current">
-            <a href="/" class="nav-link"> Home </a>
-          </li>
           <li class="nav-item">
+            <a href="index.html" class="nav-link"> Home </a>
+          </li>
+          <li class="nav-item current">
             <a href="about.html" class="nav-link"> About Me </a>
           </li>
           <li class="nav-item">
@@ -45,23 +45,44 @@
       </nav>
     </header>
 
-    <main id="home">
+    <main id="contact">
       <h1 class="lg-heading">
-        Sean <span class="text-secondary">Ormiston</span>
+        Contact <span class="text-secondary">Me</span>
       </h1>
-      <h2 class="sm-heading">Full-Stack Engineer ⎈ Musician</h2>
-      <div class="icons">
-        <a href="#!">
-          <i class="fab fa-github fa-2x"></i>
-        </a>
-        <a href="#!">
-          <i class="fab fa-linkedin fa-2x"></i>
-        </a>
-        <a href="#!">
-          <i class="fab f a-facebook fa-2x"></i>
-        </a>
-      </div>
+      <h2 class="sm-heading">It'd be great to hear from you...</h2>
+     
+    
+          <form id='contact-form'
+          name="contact"
+            data-netlify="true"
+            method="POST"
+          >
+            <input
+              placeholder="Name"
+              type="text"
+              name="name"
+              required
+            />
+            <input
+              placeholder="Email"
+              _replyto
+              type="email"
+              name="email"
+              required
+            />
+            <textarea
+              placeholder="Message"
+              type="text"
+              name="message"
+              rows="8"
+            ></textarea>
+            <input id="contact-button" type="submit" value="SUBMIT" />
+          </form>
+      
+     
     </main>
+
+    <footer id="main-footer">Copyright &copy; 2020</footer>
     <script src="js/main.js"></script>
   </body>
 </html>
