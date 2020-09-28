@@ -6,7 +6,7 @@
   
   &:hover {
     background: $secondary-color;
-    color: set-text-color($primary-color);
+    color: set-text-color($secondary-color);
   }
 }
 
@@ -23,11 +23,14 @@
   color: #000;
 }
 
-#contact-button {
-  width: 200px;
-  @include easeOut;
-  &:hover {
-    background-color: $secondary-color;
-    color: set-text-color($secondary-color)
+form#contact-form {
+  input#contact-button {
+    width: 40%;
+    @include easeOut;
+    &:hover {
+      background-color: $secondary-color;
+      color: set-text-color($secondary-color)
+    }
   }
+  
 }

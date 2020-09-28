@@ -48,11 +48,11 @@ a {
   text-decoration: none;
 }
 
-// header {
-//   position: fixed;
-//   z-index: 2;
-//   width: 100%;
-// }
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
 
 .text-secondary {
   color: $secondary-color;
@@ -81,9 +81,9 @@ main {
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
-    'bioimage bio bio'
-    'job1 job2 job3';
-  grid-template-columns: repeat(3, 1fr);
+    'bioimage bio bio';
+  grid-template-columns: repeat(3, 3fr);
+  margin: 0 10%;
 }
 
 .bio-image {
@@ -95,22 +95,6 @@ main {
 
 .bio {
   grid-area: bio;
-}
-
-.job-1 {
-  grid-area: job1;
-}
-.job-2 {
-  grid-area: job2;
-}
-.job-3 {
-  grid-area: job3;
-}
-
-.job {
-  background: lighten($primary-color, 5);
-  padding: 0.5rem;
-  border-bottom: 5px solid $secondary-color;
 }
 
 // Portfolio
@@ -137,28 +121,36 @@ main {
 #contact-form {
   display: flex;
   flex-flow: column nowrap;
-  width: 600px;
+  width: 60%;
+  text-align: center;
+  min-height: 600px;
+  
 
+  
   input,
   textarea {
-    padding: 2rem;
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
     margin: 0.25rem;
     border: 2px solid white;
     background: $primary-color;
     color: white;
     font-size: 1.5rem;
     font-family: Arial;
+    flex: 0 0;
+    
 
     &::placeholder {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: ($secondary-color);
+      color: $secondary-color;
     }
 
     &:focus {
       @include easeOut;
       outline: none;
       border-color: $secondary-color;
-      padding: 1rem;
+    
     }
   }
 }

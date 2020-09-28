@@ -97,7 +97,7 @@
   margin-bottom: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
     background: #eece1a;
-    color: #fff; }
+    color: #000; }
 
 .btn-dark {
   background: black;
@@ -107,10 +107,10 @@
   background: #c4c4c4;
   color: #000; }
 
-#contact-button {
-  width: 200px;
+form#contact-form input#contact-button {
+  width: 40%;
   transition: all 0.5s ease-out; }
-  #contact-button:hover {
+  form#contact-form input#contact-button:hover {
     background-color: #eece1a;
     color: #000; }
 
@@ -168,6 +168,11 @@ a {
   color: #fff;
   text-decoration: none; }
 
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%; }
+
 .text-secondary {
   color: #eece1a; }
 
@@ -187,8 +192,9 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
-  grid-template-columns: repeat(3, 1fr); }
+  grid-template-areas: 'bioimage bio bio';
+  grid-template-columns: repeat(3, 3fr);
+  margin: 0 10%; }
 
 .bio-image {
   grid-area: bioimage;
@@ -198,20 +204,6 @@ main {
 
 .bio {
   grid-area: bio; }
-
-.job-1 {
-  grid-area: job1; }
-
-.job-2 {
-  grid-area: job2; }
-
-.job-3 {
-  grid-area: job3; }
-
-.job {
-  background: #515151;
-  padding: 0.5rem;
-  border-bottom: 5px solid #eece1a; }
 
 .projects {
   display: grid;
@@ -228,16 +220,21 @@ main {
 #contact-form {
   display: flex;
   flex-flow: column nowrap;
-  width: 600px; }
+  width: 60%;
+  text-align: center;
+  min-height: 600px; }
   #contact-form input,
   #contact-form textarea {
-    padding: 2rem;
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
     margin: 0.25rem;
     border: 2px solid white;
     background: #444;
     color: white;
     font-size: 1.5rem;
-    font-family: Arial; }
+    font-family: Arial;
+    flex: 0 0; }
     #contact-form input::placeholder,
     #contact-form textarea::placeholder {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -246,8 +243,7 @@ main {
     #contact-form textarea:focus {
       transition: all 0.5s ease-out;
       outline: none;
-      border-color: #eece1a;
-      padding: 1rem; }
+      border-color: #eece1a; }
 
 #main-footer {
   text-align: center;
@@ -283,7 +279,7 @@ main {
     .menu-branding .portrait {
       width: 25vh; }
   .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-areas: 'bioimage' 'bio';
     grid-template-columns: 1fr; } }
 
 @media screen and (max-width: 500px) {
