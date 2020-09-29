@@ -98,6 +98,16 @@
   .projects {
     grid-template-columns: 1fr;
   }
+  
+  #contact-form {
+    min-width: 300px;
+    
+  }
+  input#contact-button {
+    min-width: 96px;
+    font-size: 1rem;
+    
+  }
 }
 
 // Smaller smartphones

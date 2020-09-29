@@ -351,7 +351,12 @@ main {
 
 @media screen and (max-width: 500px) {
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  #contact-form {
+    min-width: 300px; }
+  input#contact-button {
+    min-width: 96px;
+    font-size: 1rem; } }
 
 @media screen and (max-width: 400px) {
   h1.lg-heading,
