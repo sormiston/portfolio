@@ -204,7 +204,8 @@ main {
 
 .bio {
   grid-area: bio;
-  width: 32rem; }
+  grid-column: 2 / 4;
+  width: 100%; }
 
 .projects {
   display: grid;
@@ -300,10 +301,11 @@ main {
 @media screen and (max-width: 768px) {
   section {
     align-items: center;
-    text-align: center; }
+    text-align: center;
+    margin: 0 auto; }
     section .lg-heading {
       line-height: 1;
-      margin-bottom: 1rem; }
+      margin: 1rem; }
   .menu {
     flex-flow: column nowrap; }
   ul.menu-nav,
@@ -324,8 +326,8 @@ main {
     .menu-branding .portrait {
       width: 25vh; }
   .about-info {
-    grid-template-areas: 'bioimage' 'bio';
-    grid-template-columns: 1fr; } }
+    display: flex;
+    flex-flow: column nowrap; } }
 
 @media screen and (max-width: 500px) {
   .projects {

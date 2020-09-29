@@ -96,7 +96,8 @@ main {
 
 .bio {
   grid-area: bio;
-  width: 32rem;
+  grid-column: 2 / 4;
+  width: 100%;
 }
 
 // Portfolio
