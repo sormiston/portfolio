@@ -1,4 +1,9 @@
 // Media query mixins
+@mixin mediaXs {
+  @media screen and (max-width: 400px) {
+    @content;
+  }
+}
 @mixin mediaSm {
   @media screen and (max-width: 500px) {
     @content;
@@ -20,14 +25,11 @@
   }
 }
 
-
 // Widescreens
 @include mediaXL {
-  
 }
 // Desktops & Laptops
 @include mediaLg {
-  
 }
 // Tablets & Small Laptops
 @include mediaMd {
@@ -35,7 +37,7 @@
     align-items: center;
     text-align: center;
     margin: 0 auto;
-    
+
     .lg-heading {
       line-height: 1;
       margin: 1rem;
@@ -49,21 +51,20 @@
     float: none;
     width: 100%;
     min-height: 0;
-    
-  &.show {
-    transform: translate3d(0,0,0);
-  }
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
   }
   .menu-nav {
     height: 75vh;
     transform: translate3d(-100%, 0, 0);
     font-size: 24px;
-    
   }
   .menu-branding {
     height: 25vh;
     transform: translate3d(100%, 0, 0);
-    
+
     .portrait {
       width: 25vh;
     }
@@ -72,11 +73,38 @@
     display: flex;
     flex-flow: column nowrap;
   }
+
+  .projects {
+    display: flex;
+    flex-flow: column nowrap;
+
+    & > * {
+      margin: 0 1rem;
+    }
+    
+    .divider {
+      border: 1px solid $secondary-color;
+      margin: 1.5rem 10rem;
+    }
+  }
   
+  #contact {
+    display: flex;
+    flex-flow: column;
+  }
 }
 // Smartphones
 @include mediaSm {
   .projects {
     grid-template-columns: 1fr;
+  }
+}
+
+// Smaller smartphones
+@include mediaXs {
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 5rem;
   }
 }
