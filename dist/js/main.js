@@ -34,16 +34,19 @@ function toggleMenu() {
   }
   
 }
-  
 // for li.nav-item in navItems, add eventListener
-navItems.forEach(item => item.addEventListener('click', (e) => toggleCurrent(e.target)))
-//define callback function that removes current from all NavItems and adds it to input item 
-function toggleCurrent(elt) {
-  
+navItems.forEach(item => item.addEventListener('click', (e) => select(e.target)))
+navItems.forEach(item => item.addEventListener('mouseover', (e) => navigate(e.target)))
+
+//define callback function that removes current from previous and adds to selected
+function navigate(elt) {
   const prevItem = document.querySelector('.current')
   if (prevItem) prevItem.classList.remove('current')
   elt.parentElement.classList.add('current')
-  console.log(elt.parentElement.classList)
+}
+
+function select() {
+  setTimeout(toggleMenu, 500)
 }
 
 
