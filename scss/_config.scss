@@ -5,7 +5,7 @@ $swatch-2: rgba(#FF0022, 0.5);
 $swatch-3: rgba(#EBBAB9, 0.5);
 $swatch-4: rgba(#5ADBFF, 0.5);
 $show-home-image: true;
-$home-image: url('/dist/assets/triangle.jpg');
+$home-image: url('assets/triangle.jpg');
 $background-opacity: 0.6;
 
 @mixin portrait-frame {
