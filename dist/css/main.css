@@ -56,7 +56,7 @@
       height: 250px;
       border-radius: 50%;
       border: solid 3px #eece1a;
-      background: url("/dist/assets/SeanOrmiston_headshot_0817_250x250.png");
+      background: url("./assets/SeanOrmiston_headshot_0817_250x250.png");
       background-size: contain; }
   .menu .nav-item {
     transform: translate3d(50vw, 0, 0);
