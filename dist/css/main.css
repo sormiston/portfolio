@@ -195,10 +195,26 @@ main {
   grid-template-areas: 'bioimage bio bio';
   grid-template-columns: repeat(3, 3fr);
   margin: 0 10%; }
+  .about-info .social-card {
+    grid-area: bioimage;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center; }
+    .about-info .social-card .resume {
+      transition: all 0.5s ease-out;
+      font-size: 1.2rem;
+      background: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: .5rem;
+      color: #444; }
+      .about-info .social-card .resume:hover {
+        background: #eece1a;
+        cursor: pointer; }
 
 .bio-image {
-  grid-area: bioimage;
-  margin: auto;
+  margin: 0 auto;
   border-radius: 50%;
   border: #eece1a 3px solid; }
 

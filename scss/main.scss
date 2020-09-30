@@ -87,11 +87,38 @@ main {
   grid-template-areas: 'bioimage bio bio';
   grid-template-columns: repeat(3, 3fr);
   margin: 0 10%;
+  
+  .social-card {
+    grid-area: bioimage;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+    .resume {
+      @include easeOut;
+      font-size: 1.2rem;
+      background: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: .5rem;
+      color: $primary-color;
+      
+      &:hover {
+        background: $secondary-color;
+        cursor: pointer;
+        
+      }
+    }
+  }
+  
+ 
 }
 
 .bio-image {
-  grid-area: bioimage;
-  margin: auto;
+  // grid-area: bioimage;
+  margin: 0 auto;
   border-radius: 50%;
   border: $secondary-color 3px solid;
 }
