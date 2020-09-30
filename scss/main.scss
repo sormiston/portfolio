@@ -2,6 +2,7 @@
 @import 'menu';
 @import 'button';
 
+
 * {
   box-sizing: border-box;
 }
@@ -10,9 +11,11 @@ body {
   background: $primary-color;
   color: set-text-color($primary-color);
   height: 100%;
-  margin: 0;
+ 
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
+  
+  margin: 0 auto;
 }
 
 section#landing {
@@ -107,7 +110,6 @@ main {
   grid-template-columns: 5fr 3fr 3fr 5fr;
   grid-template-rows: 62vw 58vw 80vw 58vw;
   grid-gap: 0.7rem;
- 
 
   .item-1,
   .item-2,
@@ -122,25 +124,30 @@ main {
     flex-flow: column;
     padding: 1rem;
     justify-content: center;
-    
-    h2, h4, span {
-      text-shadow: 1px 2px darken($secondary-color, 40);
+
+    h2,
+    h4,
+    span {
+      text-shadow: 2px 2px darken($secondary-color, 40);
     }
 
+    h2 {
+      font-size: 2rem;
+    }
     h4 {
       margin: unset;
     }
 
     p {
-      font-size: 0.8rem;
+      font-size: 1rem;
       margin: 1.4rem 0;
     }
 
     span {
-      margin: 0.35rem 0;
+      margin: 0.5rem 0;
       i {
         color: white;
-        font-size: 26px;
+        font-size: 2rem;
       }
     }
   }
@@ -156,7 +163,6 @@ main {
     background: $swatch-1;
     margin-right: 1rem;
     grid-column: 4 / 5;
-    
   }
 
   .item-2 {
@@ -172,6 +178,10 @@ main {
     margin-left: 1rem;
     grid-column: 1 / 2;
     grid-row: 2;
+
+    p {
+      color: black;
+    }
   }
 
   .item-3 {
@@ -208,7 +218,7 @@ main {
     border: white solid;
 
     &:hover {
-      opacity: 0.5;
+      filter: brightness(75%);
       border-color: $secondary-color;
       @include easeOut;
     }

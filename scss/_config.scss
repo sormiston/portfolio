@@ -3,7 +3,7 @@ $secondary-color: #eece1a;
 $swatch-1: rgba(#8e936d, 0.5);
 $swatch-2: rgba(#ff0022, 0.5);
 $swatch-3: rgba(#ebbab9, 0.5);
-$swatch-4: rgba(#5adbff, 0.7);
+$swatch-4: rgba(#5adbff, 0.5);
 $home-image: url('../assets/triangle.jpg');
 $cloud-1: url('../assets/cloud1.jpg');
 $background-opacity: 0.6;
@@ -42,7 +42,8 @@ $background-opacity: 0.6;
 
 @mixin background-2 {
   background: $cloud-1;
-  background-position: 0 -10%;
+
+  background-size: cover;
   
 }
 
