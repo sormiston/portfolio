@@ -11,10 +11,8 @@ body {
   background: $primary-color;
   color: set-text-color($primary-color);
   height: 100%;
- 
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
-  
   margin: 0 auto;
 }
 
@@ -25,7 +23,7 @@ section#landing {
   width: 100%;
   flex-flow: column nowrap;
   justify-content: center;
-  z-index: 1;
+  // z-index: 1;
 }
 
 // Headings
@@ -86,7 +84,7 @@ main {
   grid-gap: 30px;
   grid-template-areas: 'bioimage bio bio';
   grid-template-columns: repeat(3, 3fr);
-  margin: 0 10%;
+  margin: 0 10% 2%;
   
   .social-card {
     grid-area: bioimage;
@@ -113,7 +111,6 @@ main {
     }
   }
   
- 
 }
 
 .bio-image {
@@ -127,6 +124,14 @@ main {
   grid-area: bio;
   grid-column: 2 / 4;
   width: 100%;
+}
+
+// Graphic break
+
+#graphic-break {
+  min-height: 15vh;
+  @include background;
+  
 }
 
 // Portfolio
