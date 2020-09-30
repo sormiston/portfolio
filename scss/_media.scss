@@ -27,6 +27,11 @@
 
 // Widescreens
 @include mediaXL {
+  .projects {
+    h2 {
+      font-size: 2.5rem;
+    }
+  }
 }
 // Desktops & Laptops
 @include mediaLg {
@@ -95,6 +100,8 @@
 }
 // Smartphones
 @include mediaSm {
+  
+  
   .projects {
     grid-template-columns: 1fr;
   }

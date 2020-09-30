@@ -1,11 +1,11 @@
 $primary-color: #444;
 $secondary-color: #eece1a;
 $swatch-1: rgba(#8e936d, 0.5);
-$swatch-2: rgba(#FF0022, 0.5);
-$swatch-3: rgba(#EBBAB9, 0.5);
-$swatch-4: rgba(#5ADBFF, 0.5);
-$show-home-image: true;
+$swatch-2: rgba(#ff0022, 0.5);
+$swatch-3: rgba(#ebbab9, 0.5);
+$swatch-4: rgba(#5adbff, 0.7);
 $home-image: url('../assets/triangle.jpg');
+$cloud-1: url('../assets/cloud1.jpg');
 $background-opacity: 0.6;
 
 @mixin portrait-frame {
@@ -13,7 +13,6 @@ $background-opacity: 0.6;
   height: 250px;
   border-radius: 50%;
   border: solid 3px $secondary-color;
-  
 }
 
 @mixin easeOut {
@@ -21,30 +20,31 @@ $background-opacity: 0.6;
 }
 
 @mixin background {
-  @if $show-home-image {
-     
-      background: $home-image;
-      background-attachment: fixed;
-      background-size: cover;
-      position: relative;
-      z-index: -2;
-      height: 100%;
-    
-      
-      // Bckground Gray Opacity Overlay
-      &:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        height: 100%;
-        width: 100%;
-        background: rgba($primary-color, $background-opacity);
-        z-index: -1;
-      }
-    }
-  }
+  background: $home-image;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  z-index: -2;
+  height: 100%;
 
+  // Bckground Gray Opacity Overlay
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba($primary-color, $background-opacity);
+    z-index: -1;
+  }
+}
+
+@mixin background-2 {
+  background: $cloud-1;
+  background-position: 0 -10%;
+  
+}
 
 // Set Text Color (function)
 @function set-text-color($color) {
