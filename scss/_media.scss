@@ -101,7 +101,9 @@
 // Smartphones
 @include mediaSm {
   
-  
+  #landing, #graphic-break {
+    background-position: center;
+  }
   .projects {
     grid-template-columns: 1fr;
   }

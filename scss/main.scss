@@ -16,7 +16,7 @@ body {
   margin: 0 auto;
 }
 
-section#landing {
+#landing {
   @include background;
   height: 101vh;
   display: flex;
