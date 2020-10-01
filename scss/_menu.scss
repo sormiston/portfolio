@@ -14,11 +14,11 @@
     background: set-text-color($primary-color);
     @include easeOut;
   }
-  
+
   // Rotate to X
   &.close {
     transform: rotate(180deg);
-  
+
     .btn-line {
       // Line 1 - Rotate
       &:nth-child(1) {
@@ -44,11 +44,11 @@
   width: 100%;
   visibility: hidden;
   // display: flex;
-  
+
   &.show {
     visibility: visible;
   }
-  
+
   &-branding,
   &-nav {
     display: flex;
@@ -60,9 +60,9 @@
     height: 100vh;
     overflow: hidden;
   }
-  
+
   // Nav Side
-  
+
   &-nav {
     margin: 0;
     padding: 0;
@@ -70,64 +70,78 @@
     list-style: none;
     transform: translate3d(0, -100%, 0);
     @include easeOut;
-    
+
     &.show {
-      transform: translate3d(0,0,0);
+      transform: translate3d(0, 0, 0);
     }
   }
-  
+
   //Branding Side
+  @keyframes clockwise {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
   &-branding {
     background: rgba(darken($primary-color, 1), 0.9);
     transform: translate3d(0, 100%, 0);
     @include easeOut;
-    
-    &.show {
-    transform: translate3d(0, 0, 0);
+
+    .spinner {
+      height: 6rem;
+      width: 6rem;
+      font-size: 6rem;
+      filter: invert(82%) sepia(76%) saturate(1225%)
+        hue-rotate(342deg) brightness(96%) contrast(94%);
     }
-    
-    .portrait {
-      @include portrait-frame;
-      background: url('../assets/SeanOrmiston_headshot_0817_250x250.png');
-      background-size: contain;
-    
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+
+      .spinner {
+        animation: clockwise 2s;
+      }
     }
   }
-    .nav-item {
-      transform: translate3d(50vw, 0, 0);
-      @include easeOut;
-      //slide in from right
+  
+  .nav-item {
+    transform: translate3d(50vw, 0, 0);
+    @include easeOut;
+    //slide in from right
     &.show {
       transform: translate3d(0, 0, 0);
     }
-    
+
     &.current > a {
       color: $secondary-color;
     }
   }
-  
+
   .nav-link {
     display: inline-block;
     position: relative;
     font-size: 30px;
     text-transform: uppercase;
     padding: 1rem 0;
-    font-weight: 300; 
+    font-weight: 300;
     color: set-text-color($primary-color);
     text-decoration: none;
     @include easeOut;
-    
+
     &:hover {
       color: $secondary-color;
     }
   }
-  }
+}
 
-  // Delay each nav item slide by 0.1s
-  
-  @for $x from 1 through 4 {
-    .nav-item:nth-child(#{$x}) {
-      transition-delay: $x * 0.1s;
-    }
+// Delay each nav item slide by 0.1s
+
+@for $x from 1 through 4 {
+  .nav-item:nth-child(#{$x}) {
+    transition-delay: $x * 0.1s;
   }
- 
+}

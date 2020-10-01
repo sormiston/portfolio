@@ -45,19 +45,25 @@
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
+
+@keyframes clockwise {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
   .menu-branding {
     background: rgba(65, 65, 65, 0.9);
     transform: translate3d(0, 100%, 0);
     transition: all 0.5s ease-out; }
+    .menu-branding .spinner {
+      height: 6rem;
+      width: 6rem;
+      font-size: 6rem;
+      filter: invert(82%) sepia(76%) saturate(1225%) hue-rotate(342deg) brightness(96%) contrast(94%); }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
-    .menu-branding .portrait {
-      width: 250px;
-      height: 250px;
-      border-radius: 50%;
-      border: solid 3px #eece1a;
-      background: url("../assets/SeanOrmiston_headshot_0817_250x250.png");
-      background-size: contain; }
+      .menu-branding.show .spinner {
+        animation: clockwise 2s; }
   .menu .nav-item {
     transform: translate3d(50vw, 0, 0);
     transition: all 0.5s ease-out; }
