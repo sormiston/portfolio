@@ -137,7 +137,7 @@ main {
 // Portfolio
 
 .projects {
-  @include background-2;
+
   display: grid;
   grid-template-columns: 5fr 3fr 3fr 5fr;
   grid-template-rows: 62vw 58vw 80vw 58vw;

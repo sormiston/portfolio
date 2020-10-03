@@ -40,11 +40,7 @@ $background-opacity: 0.6;
   }
 }
 
-@mixin background-2 {
-  background: $cloud-1;
-  background-size: cover;
-  
-}
+
 
 // Set Text Color (function)
 @function set-text-color($color) {
@@ -54,3 +50,5 @@ $background-opacity: 0.6;
     @return #fff;
   }
 }
+
+@import 'media';

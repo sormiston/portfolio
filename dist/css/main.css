@@ -1,3 +1,66 @@
+@media screen and (min-width: 1171px) {
+  .projects h2 {
+    font-size: 2.5rem; } }
+
+@media screen and (max-width: 768px) {
+  section {
+    align-items: center;
+    text-align: center;
+    margin: 0 auto; }
+    section .lg-heading {
+      line-height: 1;
+      margin: 1rem; }
+  .menu {
+    flex-flow: column nowrap; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portrait {
+      width: 25vh; }
+  .about-info {
+    display: flex;
+    flex-flow: column nowrap; }
+  .projects {
+    display: flex;
+    flex-flow: column nowrap; }
+    .projects > * {
+      margin: 0 1rem; }
+    .projects .divider {
+      border: 1px solid #eece1a;
+      margin: 1.5rem 10rem; }
+  #contact {
+    display: flex;
+    flex-flow: column; } }
+
+@media screen and (max-width: 500px) {
+  #landing, #graphic-break {
+    background-position: center; }
+  .projects {
+    grid-template-columns: 1fr; }
+  #contact-form {
+    min-width: 300px; }
+  input#contact-button {
+    min-width: 96px;
+    font-size: 1rem; } }
+
+@media screen and (max-width: 400px) {
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 5rem; } }
+
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -247,8 +310,6 @@ main {
     z-index: -1; }
 
 .projects {
-  background: url("../assets/cloud1.jpg");
-  background-size: cover;
   display: grid;
   grid-template-columns: 5fr 3fr 3fr 5fr;
   grid-template-rows: 62vw 58vw 80vw 58vw;
