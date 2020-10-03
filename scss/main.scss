@@ -2,7 +2,6 @@
 @import 'menu';
 @import 'button';
 
-
 * {
   box-sizing: border-box;
 }
@@ -85,32 +84,29 @@ main {
   grid-template-areas: 'bioimage bio bio';
   grid-template-columns: repeat(3, 3fr);
   margin: 0 10% 2%;
-  
+
   .social-card {
     grid-area: bioimage;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    
-    
+
     .resume {
       @include easeOut;
       font-size: 1.2rem;
       background: #fff;
       border: none;
       border-radius: 5px;
-      padding: .5rem;
+      padding: 0.5rem;
       color: $primary-color;
-      
+
       &:hover {
         background: $secondary-color;
         cursor: pointer;
-        
       }
     }
   }
-  
 }
 
 .bio-image {
@@ -131,13 +127,11 @@ main {
 #graphic-break {
   min-height: 15vh;
   @include background;
-  
 }
 
 // Portfolio
 
 .projects {
-
   display: grid;
   grid-template-columns: 5fr 3fr 3fr 5fr;
   grid-template-rows: 62vw 58vw 80vw 58vw;
@@ -291,6 +285,15 @@ main {
         @include easeOut;
         outline: none;
         border-color: $secondary-color;
+      }
+    }
+
+    #contact-button {
+      margin-top: 2rem;
+      @include easeOut;
+      &:hover {
+        background-color: $secondary-color;
+        color: set-text-color($secondary-color);
       }
     }
   }

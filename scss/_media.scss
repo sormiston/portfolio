@@ -96,6 +96,10 @@
   #contact {
     display: flex;
     flex-flow: column;
+    
+    #contact-button {
+      font-size: .75rem;
+    }
   }
 }
 // Smartphones
@@ -125,5 +129,11 @@
   h2.lg-heading,
   h3.lg-heading {
     font-size: 5rem;
+  }
+  
+  :not(#landing) {
+    h2.sm-heading {
+      display: none;
+    }
   }
 }
