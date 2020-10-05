@@ -10,4 +10,3 @@ On single-page-redesign branch:
 | --------------|  :-------------:         |  :--------: |     :--------:    |        :--------:      |
 |  09-30-2020   |  Playable screencast videos on portfolio   |    M       |     2 hr         |                       |
 
-This is a PR experiment.
