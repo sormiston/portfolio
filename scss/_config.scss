@@ -12,6 +12,8 @@ $background-opacity: 0.6;
 body {
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
+-webkit-text-stroke: 0.55px rgba(0,0,0,0.1);
+// text-shadow: #999 0px 1px 1px;
 }
 
 @mixin portrait-frame {
