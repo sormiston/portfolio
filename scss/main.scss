@@ -132,10 +132,12 @@ main {
 // Portfolio
 
 .projects {
+  
   display: grid;
   grid-template-columns: 5fr 3fr 3fr 5fr;
   grid-template-rows: 62vw 58vw 80vw 58vw;
   grid-gap: 0.7rem;
+
 
   .item-1,
   .item-2,
