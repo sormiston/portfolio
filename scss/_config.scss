@@ -8,6 +8,14 @@ $home-image: url('../assets/triangle.jpg');
 $cloud-1: url('../assets/cloud1.jpg');
 $background-opacity: 0.6;
 
+//vendor-props
+body {
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+-webkit-text-stroke: 0.55px rgba(0,0,0,0.1);
+// text-shadow: #999 0px 1px 1px;
+}
+
 @mixin portrait-frame {
   width: 250px;
   height: 250px;
