@@ -54,6 +54,8 @@ body {
 @media screen and (max-width: 500px) {
   #landing, #graphic-break {
     background-position: center; }
+    #landing .icons, #graphic-break .icons {
+      margin-top: revert; }
   .projects {
     grid-template-columns: 1fr; }
   #contact-form {
@@ -68,7 +70,9 @@ body {
   h3.lg-heading {
     font-size: 5rem; }
   :not(#landing) h2.sm-heading {
-    display: none; } }
+    font-size: 1.25rem; }
+  #landing .icons {
+    margin-top: 1.5rem; } }
 
 .menu-btn {
   position: absolute;
@@ -220,6 +224,9 @@ body {
     width: 100%;
     background: rgba(68, 68, 68, 0.6);
     z-index: -1; }
+  #landing .icons {
+    font-size: 2rem;
+    margin-top: -20px; }
 
 h1,
 h2,
@@ -504,6 +511,8 @@ main {
 @media screen and (max-width: 500px) {
   #landing, #graphic-break {
     background-position: center; }
+    #landing .icons, #graphic-break .icons {
+      margin-top: revert; }
   .projects {
     grid-template-columns: 1fr; }
   #contact-form {
@@ -518,4 +527,6 @@ main {
   h3.lg-heading {
     font-size: 5rem; }
   :not(#landing) h2.sm-heading {
-    display: none; } }
+    font-size: 1.25rem; }
+  #landing .icons {
+    margin-top: 1.5rem; } }
