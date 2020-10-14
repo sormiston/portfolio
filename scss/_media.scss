@@ -107,6 +107,10 @@
   
   #landing, #graphic-break {
     background-position: center;
+    
+    .icons {
+      margin-top: revert;
+    }
   }
   .projects {
     grid-template-columns: 1fr;
@@ -133,7 +137,13 @@
   
   :not(#landing) {
     h2.sm-heading {
-      display: none;
+      font-size: 1.25rem;
+    }
+  }
+  
+  #landing {
+    .icons {
+      margin-top: 1.5rem;
     }
   }
 }

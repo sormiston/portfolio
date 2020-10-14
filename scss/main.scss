@@ -22,7 +22,11 @@ body {
   width: 100%;
   flex-flow: column nowrap;
   justify-content: center;
-  // z-index: 1;
+  
+  .icons {
+    font-size: 2rem;
+    margin-top: -20px; 
+  }
 }
 
 // Headings
